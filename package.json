@@ -1,0 +1,17 @@
+{
+  "name": "how_much_sugar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass -o css sass",
+    "watch-css": "nodemon -e sass -x \"npm run build-css\""
+  },
+  "author": "ozarion",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.10.0",
+    "nodemon": "^1.18.6"
+  }
+}

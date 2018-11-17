@@ -1,0 +1,323 @@
+// COLORS
+$bg-color-main: white;
+$fore-color-main: #333;
+$fore-color-secondary: #666;
+$color-pinky-red: rgb(255,40,40);
+
+// FONT STYLES
+@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One|Fredericka+the+Great|Kalam');
+$font-cursive: 'Kalam', cursive;
+$font-heading: 'Alfa Slab One', monospace;
+$font-sketch: 'Fredericka the Great', Arial;
+
+// FONT SIZES
+$font-size: 16px;
+$heading-font-size: $font-size*2.2;
+
+:root {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  
+  body {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+    background-color: $bg-color-main;
+    color: $fore-color-main;
+    .section-header {
+      display: flex;
+      flex-direction: row;
+      width: 90%;
+      margin: 1rem auto;
+      padding: 0;
+      justify-content: space-between;
+      .title {
+        font-family: $font-heading;
+        font-size: $heading-font-size;
+        font-weight: 300;
+      }
+      .cube-count-container {
+        display: flex;
+        font-family: $font-heading;
+        font-weight: 300;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        top: 1.5rem;
+        justify-content: flex-end;
+        .cube-title {
+          font-size: $heading-font-size * 0.7;
+          text-align: center;
+        }
+        .cube-number {
+          font-size: $heading-font-size * 1.1;
+          font-weight: 800;
+          color: $color-pinky-red;
+        }
+      }
+    }
+    
+    .wrap-main-aside {
+      display: flex;
+      flex-direction: row-reverse;
+      width: 90%;
+      margin: 0 auto;
+      
+      .section-main {
+        flex: 26;
+        display: flex;
+        flex-direction: row;
+        
+        .remarks-container {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex: 1.5;
+          max-width: 100%;
+          .remarks {
+            font-size: $heading-font-size*1;
+            font-family: $font-sketch;
+          }
+        }
+
+        .beverage-section {
+          display: flex;
+          flex-direction: row;
+          flex: 6;
+          #column-divs{
+            margin-top: -5%;
+            margin-left: 10%;
+            display: flex;
+            flex-direction: column;
+            #droppable{
+              flex: 1;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-direction: row;
+              margin-left: 15%;
+              .droppable-area-text{
+                text-align: center;
+                font-family: $font-cursive;
+                color: $fore-color-secondary;
+              }
+            }
+            
+            
+            #current-beverage-container{
+              flex: 2.5;
+              display: flex;
+              min-width: 200px;
+              flex-direction: row;
+              align-items: center;
+              padding-left: 16%;
+              #main-image{ 
+                height: 320px;
+              }
+            }
+            #play-again-div{
+              display: flex;
+              flex-direction: column;
+              flex: 1;
+              padding-top: 10px;
+              align-items: center;
+              justify-content: center;
+              #play-again{
+                flex: 2;
+                display: flex;
+                flex-direction: column;
+                height: 100px;
+                width: 150px;
+              }
+              .play-again-text{
+                width: 100px;
+                line-height: 21px;
+                font-family: $font-heading;
+                font-size: 1.5em;
+                font-weight: 300;
+                text-align: center;
+              }
+            }
+          }
+          #sugar-text-div{
+            display: flex;
+            width: 200px;
+            height: 130px;
+            margin-top: 100%;
+            margin-left: 40%;
+            flex-direction: column;
+            #sugar-text{
+              text-align: center;
+              font-family: $font-cursive;
+              color: $fore-color-secondary;
+            }
+          }
+          #sugar-cube-div{
+            display: flex;
+            flex-direction: row;
+            flex: 1.5;
+            position: relative;
+            #sugar-cube{
+              margin-top: -20%;
+              transform: translate(0, 0);
+              margin-left: 24%;
+              height: 70px;
+              background: transparent;
+            }
+
+            #sugar-cube:hover{
+              cursor: pointer;
+            }
+            #sugar-cube, #sugar-cubes{
+              position: absolute;
+              background: transparent;
+            }
+            #sugar-cubes{
+              margin-top: -20%;
+              height: 130px;
+            }
+          }
+          #thermometer-div{
+            flex: 1;
+            display: flex;
+            flex-direction: row;
+
+            #thermometer {
+              position: relative;
+              top: -20px;
+            .thermo-img {
+                height: 300px;
+                position: relative;
+                display: block;
+                top: 27%;
+                padding-left: 20px;
+              }
+              
+              #background {
+                width: 50px;
+                height: 400px;
+                top: 0;
+                left: 35px;
+                margin: 20px;
+                position: absolute;
+                #animate {
+                  width: 45px;
+                  height: 0px;
+                  bottom: 0;
+                  left: 9px;
+                  z-index: -1;
+                  position: absolute;
+                  background: linear-gradient(to top,#77ab59, #CAE128,#DFE530,#E5DD30,#E5CC29,#E5BA29,#E6A718,#E18A0C,#E24112);
+                }
+              }
+            }
+          }
+          #thermometer-message{
+            display: flex;
+            left: 10%;
+            width: 200px;
+            flex-direction: column;
+            #message{
+              text-align: center;
+              font-family: $font-cursive;
+              color: $fore-color-secondary;
+            }
+          }
+        }
+      } // end of section-main
+      
+      .section-aside {
+        flex: 4;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .beverage-select-container {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          column-gap: 0.5rem;
+          row-gap: 0.3rem;
+
+          .beverage-item-button {
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(0,0,0,0.1);
+            background-color: transparent;
+            box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.05);
+            overflow: hidden;
+            img {
+              width: 40px;
+            }
+          }
+          .beverage-item-button:active {
+            transition-duration: 500ms;
+            transform: scale(1.2);
+          }
+          .beverage-item-button:focus {
+            outline: none;
+          }
+          .beverage-item-button:hover {
+            cursor: pointer;
+          }
+        }
+        .beverage-select-instruction {
+          text-align: center;
+          font-family: $font-cursive;
+          color: $fore-color-secondary;
+        }
+        .social-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          .social-title {
+            text-align: center;
+            font-family: $font-heading;
+            font-weight: 200;
+            color: $fore-color-secondary;
+          }
+          .social-btn-container {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            
+            .btn-facebook, .btn-twitter {
+              color: $bg-color-main;
+              border: none;
+              padding: 0.2rem 0.3rem;
+              border-radius: 0.2rem;
+              background-color: $fore-color-secondary;
+            }
+            .btn-facebook {
+              background-color: rgb(59, 89, 152);
+            }
+            .btn-twitter {
+              background-color: rgb(0, 132, 180);
+            }
+            .btn-facebook, .btn-twitter:hover{
+              cursor: pointer; 
+            }
+          } // end of social-btn-container
+
+        } // end of social-container
+      } // end of section-aside
+
+    } // end of wrap-main-aside
+
+    .footer {
+      width: 95%;
+      margin: 1rem auto 0rem auto;
+      display: flex;
+    }
+  } // end of body
+  
+} //end of root
+ 

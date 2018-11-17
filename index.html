@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>How Much Sugar your Drink has?</title>
+  <link rel="stylesheet" href="./css/font-awesome.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+ 
+  <!--Header-->
+  <header class="section-header">
+    <h1 class="title">How much sugar is in Soda?</h1>
+    <div class="cube-count-container">
+      <div class="cube-title">Cube Counter</div>
+      <div class="cube-number">2</div>
+    </div>
+  </header>
+  
+  <div class="wrap-main-aside">
+
+    <!--Main-->
+    <main class="section-main">
+      
+      <!--Remarks-->
+      <div class="remarks-container">
+        <p class="remarks" id="remark">This beast wants more!</p>
+      </div>
+
+
+      <div class="beverage-section">
+
+        <div id="column-divs">
+          <!--Drop zone -->
+          <div id="droppable"  class="dropzone">
+            <h3 class="droppable-area-text" draggable="false" ondrop="animateBar(); Remarks();">drag and drop <br> the cube here</h3>
+          </div>
+            
+          <!--Main image-->
+          <div id="current-beverage-container">
+            <img id="main-image" src="./assets/beverages/coke.png">  
+          </div>
+
+          <!--Play again section-->
+          <div id="play-again-div">
+            <img id="play-again" onclick="GameOver()" src="./assets/reset button.png" draggable="false">
+            <h3 class="play-again-text">PLAY AGAIN!</h3>
+          </div>
+
+        </div>
+
+        <div id="column-divs">
+
+
+          <!--Picking the sugar instruction-->
+          <div id="sugar-text-div">
+            <h3 id="sugar-text">click to pick <br> the cube</h3>
+          </div>
+
+          <!--Sugar Cubes-->
+            <div id="sugar-cube-div">
+              <img draggable="false" id="sugar-cubes"src="./assets/sugar-cubes.png">
+              <img id="sugar-cube"  src="./assets/single-cube.png" draggable="true">
+            </div>
+
+        </div>
+
+        <div id="column-divs">
+
+          <!--Thermometer-->
+          <div id="thermometer-div">
+     <!-- animation container -->
+              <div id="thermometer">
+                <img class="thermo-img"src="./assets/thermometer png.png" >
+                <div id="background"><div id="animate"></div></div>
+              </div>
+          </div>
+
+          <!--Health risk message-->
+          <div id="thermometer-message">
+            <h3 id="message">Keep an eye on the <br> health risk meter</h3>
+          </div>
+
+        </div>
+        
+      </div>
+
+    </main>
+
+    
+    <!--Aside-->
+    <aside class="section-aside">
+
+      <h3 class="beverage-select-instruction">click on your favorite beverage</h3>
+  
+      <!--Beverage gallery-->
+      <div class="beverage-select-container">
+        <button class="beverage-item-button" data-beverage="7_up"><img src="./assets/beverages/7_up.png" alt="7 up" /></button>
+        <button class="beverage-item-button" data-beverage="coke"><img src="./assets/beverages/coke.png" alt="" /></button>
+        <button class="beverage-item-button" data-beverage="dr_pepper"><img src="./assets/beverages/dr_pepper.png" alt="" /></button>
+        <button class="beverage-item-button" data-beverage="fanta"><img src="./assets/beverages/fanta.png" alt="" /></button>
+        <button class="beverage-item-button" data-beverage="mountain_dew"><img src="./assets/beverages/mountain_dew.png" alt="" /></button>
+        <button class="beverage-item-button" data-beverage="pepsi"><img src="./assets/beverages/pepsi.png" alt="" /></button>
+        <button class="beverage-item-button" data-beverage="red_bull"><img src="./assets/beverages/red_bull.png" alt="" /></button>
+        <button class="beverage-item-button" data-beverage="sprite"><img src="./assets/beverages/sprite.png" alt="" /></button>
+      </div>
+  
+      <!--Share container-->
+
+      <div class="social-container">
+
+        <h3 class="social-title">Share with your friends</h3>
+
+        <div class="social-btn-container">
+          <button class="btn-facebook js-popup share" data-href="https://www.facebook.com/sharer.php?u=https://osamaishtiaq.github.io/how-much-sugar/"href="#"><i class="fa fa-thumbs-up"></i> Like</button>
+          <button class="btn-twitter js-popup share" data-href="https://twitter.com/share?url=https://osamaishtiaq.github.io/how-much-sugar/"><i class="fa fa-twitter"></i> Tweet</button>
+        </div>
+
+      </div>
+    </aside>
+  
+  </div>
+  
+
+  <!--Footer-->
+  <footer class="footer">
+    <p>*According to American Heart Association (AHA), the maximum amount of added sugars you should eat in a day is 25gms</p>
+  </footer>
+  
+  <!--Scripts-->
+  <script src="./scripts/jquery.min.js"></script>
+  <script src="./scripts/loadgo.min.js"></script>
+  <script src="./scripts/script.js"></script>
+
+ </body>
+</html>
