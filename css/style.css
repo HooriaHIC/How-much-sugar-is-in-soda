@@ -82,12 +82,13 @@
               align-items: center;
               padding-left: 16%; }
               :root body .wrap-main-aside .section-main .beverage-section #column-divs #current-beverage-container #main-image {
-                height: 320px; }
+                height: 340px; }
             :root body .wrap-main-aside .section-main .beverage-section #column-divs #play-again-div {
               display: flex;
               flex-direction: column;
               flex: 1;
               padding-top: 10px;
+              padding-left: 20px;
               align-items: center;
               justify-content: center; }
               :root body .wrap-main-aside .section-main .beverage-section #column-divs #play-again-div #play-again {
@@ -122,8 +123,8 @@
             :root body .wrap-main-aside .section-main .beverage-section #sugar-cube-div #sugar-cube {
               margin-top: -20%;
               transform: translate(0, 0);
-              margin-left: 24%;
-              height: 70px;
+              margin-left: 28%;
+              height: 90px;
               background: transparent; }
             :root body .wrap-main-aside .section-main .beverage-section #sugar-cube-div #sugar-cube:hover {
               cursor: pointer; }
@@ -132,29 +133,29 @@
               background: transparent; }
             :root body .wrap-main-aside .section-main .beverage-section #sugar-cube-div #sugar-cubes {
               margin-top: -20%;
-              height: 130px; }
+              height: 160px; }
           :root body .wrap-main-aside .section-main .beverage-section #thermometer-div {
             flex: 1;
             display: flex;
             flex-direction: row; }
             :root body .wrap-main-aside .section-main .beverage-section #thermometer-div #thermometer {
               position: relative;
-              top: -20px; }
+              top: -40px; }
               :root body .wrap-main-aside .section-main .beverage-section #thermometer-div #thermometer .thermo-img {
-                height: 300px;
+                height: 330px;
                 position: relative;
                 display: block;
-                top: 27%;
+                top: 35%;
                 padding-left: 20px; }
               :root body .wrap-main-aside .section-main .beverage-section #thermometer-div #thermometer #background {
                 width: 50px;
-                height: 400px;
-                top: 0;
-                left: 35px;
+                height: 500px;
+                top: -5%;
+                left: 40px;
                 margin: 20px;
                 position: absolute; }
                 :root body .wrap-main-aside .section-main .beverage-section #thermometer-div #thermometer #background #animate {
-                  width: 45px;
+                  width: 48px;
                   height: 0px;
                   bottom: 0;
                   left: 9px;

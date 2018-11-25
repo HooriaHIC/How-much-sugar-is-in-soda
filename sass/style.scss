@@ -113,7 +113,7 @@ $heading-font-size: $font-size*2.2;
               align-items: center;
               padding-left: 16%;
               #main-image{ 
-                height: 320px;
+                height: 340px;
               }
             }
             #play-again-div{
@@ -121,6 +121,7 @@ $heading-font-size: $font-size*2.2;
               flex-direction: column;
               flex: 1;
               padding-top: 10px;
+              padding-left: 20px;
               align-items: center;
               justify-content: center;
               #play-again{
@@ -161,8 +162,8 @@ $heading-font-size: $font-size*2.2;
             #sugar-cube{
               margin-top: -20%;
               transform: translate(0, 0);
-              margin-left: 24%;
-              height: 70px;
+              margin-left: 28%;
+              height: 90px;
               background: transparent;
             }
 
@@ -175,7 +176,7 @@ $heading-font-size: $font-size*2.2;
             }
             #sugar-cubes{
               margin-top: -20%;
-              height: 130px;
+              height: 160px;
             }
           }
           #thermometer-div{
@@ -185,24 +186,24 @@ $heading-font-size: $font-size*2.2;
 
             #thermometer {
               position: relative;
-              top: -20px;
+              top: -40px;
             .thermo-img {
-                height: 300px;
+                height: 330px;
                 position: relative;
                 display: block;
-                top: 27%;
+                top: 35%;
                 padding-left: 20px;
               }
               
               #background {
                 width: 50px;
-                height: 400px;
-                top: 0;
-                left: 35px;
+                height: 500px;
+                top: -5%;
+                left: 40px;
                 margin: 20px;
                 position: absolute;
                 #animate {
-                  width: 45px;
+                  width: 48px;
                   height: 0px;
                   bottom: 0;
                   left: 9px;

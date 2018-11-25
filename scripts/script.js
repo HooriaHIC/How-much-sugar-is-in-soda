@@ -4,7 +4,7 @@ const imageServerEndpoint = "./assets/beverages/";
 const cubeSize = 4; // cube size is 4 grams
 const cubeCounterElement = document.querySelector('.cube-number');
 const remarks = document.getElementById('remark');
-const remarksArray = ["Lets Play!", "Keep Adding", "This beast wants more!", "Almost There", "Done!!!"];
+const remarksArray = ["Lets Play!", "hmmm","Keep Adding", "Ahhhann!", "This beast wants more!", "oh my god", "This beast still wants more","Almost There", "Yeah just a bit more", "Done!!!"];
 let mainimage = document.getElementById('main-image');
 const sugarLevel = {
   cubeCount: 0,
@@ -67,21 +67,25 @@ $("document").ready(start);
 //Draw the images using canvas
 
 window.onload = function() {
-  let c;
-  var ctx = c.getContext("2d");
+  let c = document.getElementById("section-main");
+  let ctx = c.getContext("2d");
 
   //main image
-  var mainImage = document.getElementById("main-image");
-  ctx.drawImage(mainImage, 0, 0);
+  let mainImage = new Image();
+  mainImage.src = "./assets/beverages/coke.png";
+
+  mainImage.onload = function(){
+    ctx.drawImage(mainImage, 0, 0);
+  }
 
   //sugar cubes
 
-  var sugarCubes = document.getElementById("sugar-cube");
+  let sugarCubes = document.getElementById("sugar-cube");
   ctx.drawImage(sugarCubes, 0, 0);
 
   //play again
 
-  var playAgainRestart = document.getElementById("play-again");
+  let playAgainRestart = document.getElementById("play-again");
   ctx.drawImage(playAgainRestart, 0, 0);
 }
 
@@ -125,7 +129,7 @@ function handleDragDrop(e) {
   if (e.target.className === 'droppable-area-text') {
     incrementSugar();
     e.target.style.transform = "scale(1)";
-    var audio = new Audio('./assets/audios/audio.mp3');
+    let audio = new Audio('./assets/audios/audio.mp3');
     audio.play()
   }
 }
@@ -187,10 +191,10 @@ function updateMain(newBeverageName) {
 //sharing buttons
 
 $(".js-popup").click(function() {
-  var leftPosition, topPosition;
+  let leftPosition, topPosition;
   leftPosition = window.screen.width / 2 - (566 / 2 + 10);
   topPosition = window.screen.height / 2 - (576 / 2 + 50);
-  var url = $(this).data("href");
+  let url = $(this).data("href");
   window.open(
     url,
     'name_' + Math.random(),
@@ -228,30 +232,79 @@ function GameOver(){
 GameOver();
 
 
+let zero;
+
+
+
 function Remarks() { 
+  
+
+
   if(sugarLevel.cubeCount === 0){
-    remarks.textContent = remarksArray[0];
+    
+    zero = remarks.textContent = remarksArray[0];
+    return zero;   
   }
 
   if(sugarLevel.cubeCount === 1){
-    remarks.textContent = remarksArray[1];
+    $(remarks).fadeOut(400, function(){
+      $(this).text(remarksArray[1]).fadeIn(300)
+    });
+  }
+
+  if(sugarLevel.cubeCount === 2){
+    $(remarks).fadeOut(400, function(){
+      $(this).text(remarksArray[2]).fadeIn(300)
+    });
+  }
+
+  if(sugarLevel.cubeCount === 3){
+    $(remarks).fadeOut(400, function(){
+      $(this).text(remarksArray[3]).fadeIn(300)
+    });
   }
 
   if(sugarLevel.cubeCount === 4){
-    remarks.textContent = remarksArray[2];
+    $(remarks).fadeOut(400, function(){
+      $(this).text(remarksArray[4]).fadeIn(300)
+    });
+  }
+
+  if(sugarLevel.cubeCount === 5){
+    $(remarks).fadeOut(400, function(){
+      $(this).text(remarksArray[5]).fadeIn(300)
+    });
   }
 
   if(sugarLevel.cubeCount === 6){
-    remarks.textContent = remarksArray[3];
+    $(remarks).fadeOut(400, function(){
+      $(this).text(remarksArray[6]).fadeIn(300)
+    });
   }
 
+  if(sugarLevel.cubeCount === 7){
+    $(remarks).fadeOut(400, function(){
+      $(this).text(remarksArray[7]).fadeIn(300)
+    });
+  }
+
+  if(sugarLevel.cubeCount === 8){
+    $(remarks).fadeOut(400, function(){
+      $(this).text(remarksArray[8]).fadeIn(300)
+    });
+  }
+   
   if(sugarLevel.cubeCount === 9){
-    remarks.textContent = remarksArray[4];
+    $(remarks).fadeOut(400, function(){
+      $(this).text(remarksArray[9]).fadeIn(300)
+    });
+  }
+  if(sugarLevel.cubeCount === 10){
+    $(remarks).fadeOut(400, function(){
+      $(this).text(remarksArray[10]).fadeIn(300)
+    });
   }
 
-  if(sugarLevel.cubeCount === 11){
-    remarks.textContent = remarksArray[5];
-  }
 }
 Remarks();
 
@@ -259,12 +312,12 @@ Remarks();
 
 
 // calculate progress from values as a percentage
-var progress = sugarLevel.progress + 10;
+let progress = sugarLevel.progress + 10;
 
 
 function animateBar() {
   
-  var height = 5; // height of bar
+  let height = 5; // height of bar
   
   setInterval(function() {
     // once the bar reaches the progress level, multiplied by the height of the thermometer / 100.
@@ -275,7 +328,7 @@ function animateBar() {
     } else { // increase the height of the bar
       
       height = sugarLevel.progress * 2.5; // increase height by sugarValue
-      // set height variable of bar
+      // set height letiable of bar
       document.getElementById("animate").style.height = height  +  "px";
     }
   }, 10);
