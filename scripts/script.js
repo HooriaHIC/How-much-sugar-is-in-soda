@@ -4,7 +4,7 @@ const imageServerEndpoint = "./assets/beverages/";
 const cubeSize = 4; // cube size is 4 grams
 const cubeCounterElement = document.querySelector('.cube-number');
 const remarks = document.getElementById('remark');
-const remarksArray = ["Lets Play!", "hmmm","Keep Adding", "Ahhhann!", "This beast wants more!", "oh my god", "This beast still wants more","Almost There", "Yeah just a bit more", "Done!!!"];
+const remarksArray = ["Lets Play!", "hmmm","Keep Adding", "Ahhhann!", "This beast wants more!", "oh my god", "This beast still wants more","Almost There", "Yeah just a bit more", "Done!", "Done!!!!"];
 let mainimage = document.getElementById('main-image');
 const sugarLevel = {
   cubeCount: 0,
@@ -304,7 +304,11 @@ function Remarks() {
       $(this).text(remarksArray[10]).fadeIn(300)
     });
   }
-
+  if(sugarLevel.cubeCount === 11){
+    $(remarks).fadeOut(400, function(){
+      $(this).text(remarksArray[11]).fadeIn(300)
+    });
+  }
 }
 Remarks();
 
