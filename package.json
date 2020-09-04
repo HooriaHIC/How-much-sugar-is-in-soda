@@ -14,7 +14,7 @@
   "author": "ozarion",
   "license": "ISC",
   "devDependencies": {
-    "node-sass": "^4.10.0",
+    "node-sass": "^4.13.1",
     "nodemon": "^1.18.6"
   }
 }
